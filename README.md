@@ -1,6 +1,6 @@
 #### Generate SPSS syntax from Excel files with pre-categorized answers to open-ended questions.
 
-Load function xlsx and xlsx_to_syntax:
+Load functions `xlsx` and `xlsx_to_syntax`:
 ```R
 install.packages("xlsx")
 library(xlsx)
