@@ -1,4 +1,4 @@
-xlsx_to_sps <- function(path, id, answer, value_labelss, user_na, save_to){
+xlsx_to_sps <- function(path, id, answer, value_labels, user_na, save_to){
   `%!in%` <- Negate(`%in%`)
   get_syntax <- function(df, row, id, answer, vl, na) {
     set <- df[row, which(vl[[1]][match(df[row, ], vl[[2]])] %!in%  na)][-answer]
