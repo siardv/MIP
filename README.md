@@ -19,18 +19,18 @@ xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siard
 Example:
 ```R
 xlsx_to_sps(path = "/Users/siardv/Documents/MIP/mip.xlsx", 
-               id = 1,
-               answer = 2,
-               value_labels = list(value = c(1:24, 991, 992, 999),
-                                  label = c("Economy / Financial situation", "Social security", "Politics", "Crime", "Defense",
-                                            "Healthcare", "Education", "Income / Prince levels / Taxes", "Employment",
-                                            "Traffic / Mobility", "Housing", "Environment", "Population", "Minorities", 
-                                            "Norms and values",  "Media", "European integration", "Inequality / Poverty", 
-                                            "Intolerance / Discrimination", "Foreign policy / International security", 
-                                            "Regulation / Big government", "Polarisation / Dividedness", "Immigration", 
-                                            "Corona", "There are no problems", "No other problems", "DK/NA/Cannot be coded")),
-               user_na = c(991, 992, 999),
-               save_to = "/Users/siard/Desktop")
+            id = 1,
+            answer = 2,
+            value_labels = list(value = c(1:24, 991, 992, 999),
+                                label = c("Economy / Financial situation", "Social security", "Politics", "Crime", "Defense",
+                                          "Healthcare", "Education", "Income / Prince levels / Taxes", "Employment",
+                                          "Traffic / Mobility", "Housing", "Environment", "Population", "Minorities", 
+                                          "Norms and values",  "Media", "European integration", "Inequality / Poverty", 
+                                          "Intolerance / Discrimination", "Foreign policy / International security", 
+                                          "Regulation / Big government", "Polarisation / Dividedness", "Immigration", 
+                                          "Corona", "There are no problems", "No other problems", "DK/NA/Cannot be coded")),
+            user_na = c(991, 992, 999),
+            save_to = "/Users/siard/Desktop")
                
 # or, to load multiple files:
 path = paste0("/Users/siardv/Documents/MIP/", c("mip_1", "mip_2", "mip_3"), ".xlsx")
