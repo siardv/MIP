@@ -22,7 +22,7 @@ xlsx_to_sps <- function(path, id, answer, value_labels, user_na, save_to){
         txt <- paste0(gsub("^.*/|[.].*$", "", path[i]), ".txt")
         probs <- names(df)[-c(id, answer)]
         cat(paste0("/* syntax for ", gsub("^.*/", "~/", path[i]), " (n = ", nrow(df), ").\n"),
-            paste0("\rGET  FILE = '", path[i],"'.\nDATASET NAME DEMES WINDOW = FRONT.\n"),
+            paste0("\rGET  FILE = '[PATH TO .SAV FILE]'.\nDATASET NAME DEMES WINDOW = FRONT.\n"),
             paste0("\rDO REPEAT\nX = ", toString(probs), ".\nCOMPUTE X = $SYSMIS.\nFORMATS X (F3).\nMISSING VALUES X (", toString(user_na), ").\nEND REPEAT.\n"),
             paste0("\rVALUE LABELS ", probs[1], " TO " , tail(probs, 1), "\n"),
             paste0(gsub(", ", "\n", toString(paste0(value_labels[[1]], " '", value_labels[[2]], "'"))), ".\nEXECUTE.\n"),
