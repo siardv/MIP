@@ -1,6 +1,3 @@
-
-# generate SPSS syntax to code pre-categorized answers to open-ended question from an Excel file. 
-
 if(!"xlsx" %in% installed.packages())
   install.packages("xlsx")
 library(xlsx)
@@ -11,7 +8,7 @@ get_syntax <- function(df, row, id, answer, vl, na) {
   set <- df[row, which(vl[[1]][match(df[row, ], vl[[2]])] %!in%  na)][-answer]
   pid <- ifelse(any(letters %in% tolower(strsplit(set[[id]], split = "")[[1]])), sQuote(set[[id]], ""), set[id])
   if (length(set) == 1) {
-    paste0("\n/*", row, ">.\nDO IF ", names(df)[id], " = ", pid, ".\nRECODE ", gsub(",", " TO", toString(range(names(df)[-c(id, answer)]))), " (SYSMIS = 999).\nEND IF.\n/*", row, "<\n\n")
+    paste0("\n/*", row, ">.\nDO IF ", names(df)[id], " = ", pid, ".\nRECODE ", gsub(",", " TO", toString(range(names(df)[-c(id, answer)]))), " (SYSMIS = ", 999, ").\nEND IF.\n/*", row, "<\n\n")
   } else if (length(set) == 2) {
     paste0("\n/*", row, ">.\nIF(", names(df)[id], " = ", pid, ") ", names(set[-id]), " = ", vl[[1]][amatch(set[-id], vl[[2]])], 
            ". /* ", dQuote(tolower(gsub("/", "-", set[-id])), q = "double"), ".\n/*", row, "<\n\n")
