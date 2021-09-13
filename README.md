@@ -29,6 +29,6 @@ xlsx_to_syntax(xlsx = "/Users/siardv/Documents/MIP/mip.xlsx",
                user_na = c(991, 992, 999),
                save_to = "/Users/siard/Desktop")
                
-# or to load multiple files:
+# or, to load multiple files:
 xlsx = paste0("/Users/siardv/Documents/MIP/", c("mip_1", "mip_2", "mip_3"), ".xlsx")
 ```
