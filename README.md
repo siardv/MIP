@@ -18,7 +18,7 @@ xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siard
 
 Example:
 ```R
-xlsx_to_sps(path = "/Users/siardv/Documents/MIP/mip.xlsx", 
+xlsx_to_sps(path = ".../Documents/MIP/mip.xlsx", 
             id = 1,
             answer = 2,
             value_labels = list(value = c(1:24, 991, 992, 999),
@@ -30,8 +30,8 @@ xlsx_to_sps(path = "/Users/siardv/Documents/MIP/mip.xlsx",
                                           "Regulation / Big government", "Polarisation / Dividedness", "Immigration", 
                                           "Corona", "There are no problems", "No other problems", "DK/NA/Cannot be coded")),
             user_na = c(991, 992, 999),
-            save_to = "/Users/siard/Desktop")
+            save_to = ".../Desktop")
                
 # or, to load multiple files:
-path = paste0("/Users/siardv/Documents/MIP/", c("mip_1", "mip_2", "mip_3"), ".xlsx")
+path = paste0(".../Documents/MIP/", c("mip_1", "mip_2", "mip_3"), ".xlsx")
 ```
