@@ -12,7 +12,7 @@ xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siard
 | xlsx        	| Directory to Excel file(s) containing pre-categorized answers               	|
 | id          	| Individual-level identifier                                                 	|
 | answer      	| Original answer to open-ended question                                      	|
-| value_label 	| List with categories/labels used in the Excel file and corresponding values 	|
+| value_labels 	| List with categories/labels used in the Excel file and corresponding values 	|
 | user_na     	| Which values are missing values?                                            	|
 | save_to     	| Directory to save the .sps file                                             	|
 
