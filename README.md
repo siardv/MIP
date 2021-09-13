@@ -5,7 +5,7 @@ Load functions `xlsx` and `xlsx_to_sps`:
 install.packages("xlsx")
 library(xlsx)
 
-xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/SKON/main/xlsx_to_sps.R")[1]))
+xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/MIP/main/xlsx_to_sps.R")[1]))
 ```
 | Arguments    	|                                                                             	|
 |--------------	|-----------------------------------------------------------------------------	|
