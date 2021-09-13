@@ -1,4 +1,7 @@
 
+
+# Generate SPSS syntax from Excel files with pre-categorized answers to open-ended questions.
+
 if(!"xlsx" %in% installed.packages())
   install.packages("xlsx")
 library(xlsx)
