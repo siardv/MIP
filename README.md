@@ -7,7 +7,7 @@ This repository contains an R script to semi-automatically code answers to the q
 ```
 
 ### 2. Create SPSS syntax
-Load functions `xlsx` and `xlsx_to_sps`
+Load functions `xlsx` and `xlsx_to_sps`:
 ```R
 install.packages("xlsx")
 library(xlsx)
@@ -23,7 +23,7 @@ xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siard
 | user_na     	| Which values are missing values?                                            	|
 | save_to     	| Directory to save the .sps file                                             	|
 
-Example
+Example:
 ```R
 xlsx_to_sps(path = ".../Documents/MIP/mip.xlsx", 
             id = 1,
