@@ -35,7 +35,7 @@ xlsx_to_sps <- function(path, id, answer, value_labels, user_na, save_to){
     sapply(gsub(".txt", ".sps", txt), function(sps) {
       file.rename(txt, sps)
       file.copy(sps, save_to)
+      message(paste0("Done! Saved ", sps, " to ", path.expand("~"), save_to))
     })
-    message(paste0("Done! Saved ", txt, " to ", path.expand("~"), save_to))
   }))
 }
