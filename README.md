@@ -1,7 +1,10 @@
 #### Generate SPSS syntax from Excel files with pre-categorized answers to open-ended questions.
 
-Load function from GitHub
+Load function xlsx and xlsx_to_syntax:
 ```R
+install.packages("xlsx")
+library(xlsx)
+
 xlsx_to_syntax <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/SKON/main/xlsx_to_spss.R")[1]))
 ```
 | Arguments    	|                                                                             	|
