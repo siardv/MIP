@@ -50,20 +50,7 @@ xlsx_to_syntax <- function(xlsx, id, answer, value_label, user_na, save_to){
 }
 
 
-vl <- list(value = c(1:24, 991, 992, 999),
-           label = c('Economy / Financial situation', 'Social security', 'Politics', 'Crime', 'Defense', 'Healthcare', 'Education', 
-                     'Income / Prince levels / Taxes', 'Employment', 'Traffic / Mobility', 'Housing', 'Environment', 'Population', 
-                     'Minorities', 'Norms and values', 'Media', 'European integration', 'Inequality / Poverty', 'Intolerance / Discrimination', 
-                     'Foreign policy / International security', 'Regulation / Big government', 'Polarisation / Dividedness', 'Immigration', 'Corona', 
-                     'There are no problems', 'No other problems', 'DK/NA/Cannot be coded'))
 
-
-xlsx_to_syntax(xlsx = paste0("/Users/siard/Documents/RU/SKON/MIP/MIP/", c("mip_DEMES", "mip_LISS", "mip_DPES"), ".xlsx"), 
-              id = 1,
-              answer = 2,
-              value_label = vl,
-              user_na = c(991, 992, 999),
-              save_to = "/Users/siard/Desktop")
 
 ## Arguments     
 # xlsx            Directory to Excel file(s) containing pre-categorized answers
