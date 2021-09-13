@@ -29,8 +29,8 @@ xlsx_to_sps <- function(path, id, answer, value_labels, user_na, save_to){
             sapply(1:nrow(df), function(r) unlist(ifelse(r == nrow(df), 
                                                          list(paste0(get_syntax(df, r, id, answer, value_labels, user_na), 
                                                                      paste0("\nDO REPEAT ID = ", names(df)[id], ".\nDO IF NOT (SYSMIS(", probs[1],")) AND (", 
-                                                                            names(df)[id]," = ID).\nRECODE ", probs[1], " TO ", tail(probs[1], 1), " (SYSMIS = ", 992, ").\nELSE IF (SYSMIS(", probs[1],")) AND (", 
-                                                                            names(df)[id]," = ID).\nRECODE ", probs[1], " TO ", tail(probs[1], 1), " (SYSMIS = ", 999, ").\nEND IF.\nEND REPEAT.\nEXECUTE.\n"))), 
+                                                                            names(df)[id]," = ID).\nRECODE ", probs[1], " TO ", tail(probs, 1), " (SYSMIS = ", 992, ").\nELSE IF (SYSMIS(", probs[1],")) AND (", 
+                                                                            names(df)[id]," = ID).\nRECODE ", probs[1], " TO ", tail(probs, 1), " (SYSMIS = ", 999, ").\nEND IF.\nEND REPEAT.\n\nEXECUTE.\n"))), 
                                                          list(get_syntax(df, r, id, answer, value_labels, user_na))))), file = txt, append = TRUE)
         sapply(gsub(".txt", ".sps", txt), function(sps) {
             file.rename(txt, sps)
