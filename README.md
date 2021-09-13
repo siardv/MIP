@@ -1,11 +1,13 @@
-This repository contains an R script built to assist in categorizing answers to the open-ended question "*What do you think are the most pressing problems in our country, today?*" and a function to generate matching SPSS recode syntax (if SPSS gets preference over R).
+This repository contains an R script to semi-automatically code answers to the question "*What do you think are the most pressing problems in our country, today?*" into one of several pre-defined categories. The script compares each answer against a set of fixed keywords and pre-coded answers from earlier waves using exact and fuzzy matching. If SPSS is one's primary tool and gets preference over R, there's a function to generate matching SPSS recode syntax.
 
-#### Categorize answers
+
+### 1. Code answers
+```R
 [...]
+```
 
-#### Generate SPSS syntax
-
-Load functions `xlsx` and `xlsx_to_sps`:
+### 2. Create SPSS syntax
+Load functions `xlsx` and `xlsx_to_sps`
 ```R
 install.packages("xlsx")
 library(xlsx)
@@ -21,7 +23,7 @@ xlsx_to_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siard
 | user_na     	| Which values are missing values?                                            	|
 | save_to     	| Directory to save the .sps file                                             	|
 
-Example:
+Example
 ```R
 xlsx_to_sps(path = ".../Documents/MIP/mip.xlsx", 
             id = 1,
@@ -37,6 +39,6 @@ xlsx_to_sps(path = ".../Documents/MIP/mip.xlsx",
             user_na = c(991, 992, 999),
             save_to = ".../Desktop")
                
-# or, to load multiple files:
+# or load multiple files:
 path = paste0(".../Documents/MIP/", c("mip_1", "mip_2", "mip_3"), ".xlsx")
 ```
