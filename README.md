@@ -1,4 +1,9 @@
-#### Generate SPSS syntax from Excel files with pre-categorized answers to open-ended questions.
+This repository contains an R script built to assist in categorizing answers to the open-ended question "*What do you think are the most pressing problems in our country, today?*" and a function to generate matching SPSS recode syntax (if SPSS gets preference over R).
+
+#### Categorize answers
+[...]
+
+#### Generate SPSS syntax
 
 Load functions `xlsx` and `xlsx_to_sps`:
 ```R
