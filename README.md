@@ -1,4 +1,4 @@
-This repository contains an R script to semi-automatically code answers to the question "*What do you think are the most pressing problems in our country, today?*" into one of several pre-defined categories. The script compares each answer against a set of fixed keywords and pre-coded answers from earlier waves using exact and fuzzy matching. If SPSS is one's primary tool and gets preference over R, there's a function to generate matching SPSS recode syntax.
+This repository contains an R script to semi-automatically code answers to the question "*What do you think are the most important problems in our country, today?*" into one of several pre-defined categories. The script compares each answer against a set of fixed keywords and pre-coded answers from earlier waves using exact and fuzzy matching. If SPSS is one's primary tool and gets preference over R, there's a function to generate matching SPSS recode syntax.
 
 
 ### 1. Code answers
